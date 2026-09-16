@@ -22,12 +22,12 @@ Data::Data(int inputInt, std::string string) : _placeholderInt(inputInt), _place
 {
 	
 }
-int Data::getInt()
+int Data::getInt() const
 {
 	return (_placeholderInt);
 }
 
-std::string Data::getString()
+std::string Data::getString() const
 {
 	return (_placeholderString);
 }
@@ -41,7 +41,8 @@ Data &Data::operator=(const Data &other)
 {
 	if (this != &other)
 	{
-		
+		_placeholderInt = other._placeholderInt;
+		_placeholderString = other._placeholderString;
 	}
 	return (*this);
 }

@@ -23,8 +23,8 @@ public:
 	Data(const Data &other);
 	Data &operator=(const Data &other);
 	~Data(void);
-	int getInt();
-	std::string getString();
+	int getInt() const;
+	std::string getString() const;
 
 private:
 	int _placeholderInt;
