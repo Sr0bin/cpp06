@@ -24,6 +24,8 @@ int main(void)
 	std::cout << "Address of data : 0x" << std::hex << address << std::dec << std::endl;
 	reinterpretData = Serializer::deserialize(address);
 	std::cout << "Int in reinterpreted data : " << reinterpretData->getInt() << std::endl;
+	std::cout << "Original pointer : " << data << std::endl;
+	std::cout << "Deserialized pointer : " << reinterpretData << std::endl;
 	std::cout << (reinterpretData == data ? "Same pointer" : "Different pointer") << std::endl;
 	delete data;
 
