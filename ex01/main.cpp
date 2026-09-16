@@ -16,14 +16,16 @@
 
 int main(void)
 {
-	Data *data = new Data(8, "test");
+	Data *data = new Data;
 	uintptr_t address;
+	data->number = 8;
+	data->string = "test";
 	Data *reinterpretData;
-	std::cout << "Int stored in data : " << data->getInt() << std::endl;
+	std::cout << "Int stored in data : " << data->number << std::endl;
 	address = Serializer::serialize(data);
 	std::cout << "Address of data : 0x" << std::hex << address << std::dec << std::endl;
 	reinterpretData = Serializer::deserialize(address);
-	std::cout << "Int in reinterpreted data : " << reinterpretData->getInt() << std::endl;
+	std::cout << "Int in reinterpreted data : " << reinterpretData->number << std::endl;
 	std::cout << "Original pointer : " << data << std::endl;
 	std::cout << "Deserialized pointer : " << reinterpretData << std::endl;
 	std::cout << (reinterpretData == data ? "Same pointer" : "Different pointer") << std::endl;

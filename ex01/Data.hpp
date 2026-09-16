@@ -17,19 +17,8 @@
 
 struct Data
 {
-public:
-	Data(void);
-	Data(int inputInt, std::string string);
-	Data(const Data &other);
-	Data &operator=(const Data &other);
-	~Data(void);
-	int getInt() const;
-	std::string getString() const;
-
-private:
-	int _placeholderInt;
-	std::string _placeholderString;
-	
+	int			number;
+	std::string	string;
 };
 
 #endif

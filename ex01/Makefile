@@ -16,7 +16,7 @@ NAME = serialize
 
 SOURCES_DIR = .
 
-SOURCES_NAME = main.cpp Serializer.cpp Data.cpp
+SOURCES_NAME = main.cpp Serializer.cpp
 
 #---------------------------
 
