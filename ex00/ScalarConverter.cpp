@@ -6,24 +6,35 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 15:23:50 by rorollin          #+#    #+#             */
-/*   Updated: 2026/05/28 15:33:16 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/09/16 14:14:59 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "ScalarConvert.hpp"
+#include "ScalarConverter.hpp"
+#include "Displayer.hpp"
 
-ScalarConvert::ScalarConvert(void)
+void	ScalarConverter::convert(const std::string &string)
+{
+	Displayer	disp(string);
+
+	disp.displayChar();
+	disp.displayInt();
+	disp.displayFloat();
+	disp.displayDouble();
+}
+
+ScalarConverter::ScalarConverter(void)
 {
 	
 }
 
-ScalarConvert::ScalarConvert(const ScalarConvert &other)
+ScalarConverter::ScalarConverter(const ScalarConverter &other)
 {
 	*this = other;
 }
 
-ScalarConvert &ScalarConvert::operator=(const ScalarConvert &other)
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
 {
 	if (this != &other)
 	{
@@ -32,7 +43,7 @@ ScalarConvert &ScalarConvert::operator=(const ScalarConvert &other)
 	return (*this);
 }
 
-ScalarConvert::~ScalarConvert(void)
+ScalarConverter::~ScalarConverter(void)
 {
 	
 }

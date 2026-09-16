@@ -6,16 +6,20 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 15:20:33 by rorollin          #+#    #+#             */
-/*   Updated: 2026/05/28 19:13:40 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/09/16 14:15:15 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Displayer.hpp"
+#include "ScalarConverter.hpp"
+#include <iostream>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	std::string ten("+inf");
-	Displayer disp(ten);
-	disp.displayChar();
-
+	if (argc != 2)
+	{
+		std::cerr << "usage: ./convert <literal>" << std::endl;
+		return (1);
+	}
+	ScalarConverter::convert(argv[1]);
+	return (0);
 }

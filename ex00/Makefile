@@ -6,7 +6,7 @@
 #    By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/19 15:44:49 by rorollin          #+#    #+#              #
-#    Updated: 2026/05/28 16:28:00 by rorollin         ###   ########.fr        #
+#    Updated: 2026/09/16 14:14:41 by rorollin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = convert
 
 SOURCES_DIR = .
 
-SOURCES_NAME = main.cpp Displayer.cpp ScalarConvert.cpp
+SOURCES_NAME = main.cpp Displayer.cpp ScalarConverter.cpp
 
 #---------------------------
 
