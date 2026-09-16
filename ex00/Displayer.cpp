@@ -189,7 +189,7 @@ void Displayer::displayChar(void)
 
 void Displayer::displayInt(void)
 {
-	std::cout << "int : ";
+	std::cout << "int: ";
 	switch (_type)
 	{
 		case (INT) : case (CHAR) :
@@ -213,7 +213,7 @@ void Displayer::displayInt(void)
 
 void Displayer::displayFloat(void)
 {
-	std::cout << "float : ";
+	std::cout << "float: ";
 	switch (_type)
 	{
 		case (INT) : case (CHAR) :
@@ -237,7 +237,7 @@ void Displayer::displayFloat(void)
 
 void Displayer::displayDouble(void)
 {
-	std::cout << "double : ";
+	std::cout << "double: ";
 	switch (_type)
 	{
 		case (INT) : case (CHAR) :
