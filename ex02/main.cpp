@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 14:55:04 by rorollin          #+#    #+#             */
-/*   Updated: 2026/09/16 17:04:01 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/09/16 17:11:49 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "C.hpp"
 #include <cstdlib>
 #include <ctime>
+#include <exception>
 #include <iostream>
 
 Base *generate(void)
@@ -44,24 +45,21 @@ void identify(Base *p)
 void identify(Base &p)
 {
 	try {
-		A a;
-		a = dynamic_cast<A&>(p);
+		(void)dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
 	}
 	catch (std::exception &e)
 	{
 	}
 	try {
-		B b;
-		b = dynamic_cast<B&>(p);
+		(void)dynamic_cast<B&>(p);
 		std::cout << "B" << std::endl;
 	}
 	catch (std::exception &e)
 	{
 	}
 	try {
-		C c;
-		c = dynamic_cast<C&>(p);
+		(void)dynamic_cast<C&>(p);
 		std::cout << "C" << std::endl;
 	}
 	catch (std::exception &e)
