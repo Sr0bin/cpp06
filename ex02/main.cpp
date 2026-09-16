@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 14:55:04 by rorollin          #+#    #+#             */
-/*   Updated: 2026/09/16 17:11:49 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/09/16 17:42:06 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,15 @@ void identify(Base &p)
 
 int main()
 {
-	Base *base;
 	srand(time(0));
-	base = generate();
-	identify(base);
-	identify(*base);
-	delete base;
+	for(int i=0; i< 5;i++)
+	{
+		std::cout << "--------------------------" << std::endl;
+		Base *base;
+		base = generate();
+		identify(base);
+		identify(*base);
+		delete base;
+	}
 
 }
