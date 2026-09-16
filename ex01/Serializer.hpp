@@ -14,7 +14,7 @@
 # define SERIALIZER_HPP
 # include <stdint.h>
 
-class Data;
+struct Data;
 class Serializer
 {
 public:

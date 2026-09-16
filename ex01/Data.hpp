@@ -15,7 +15,7 @@
 # define DATA_HPP
 # include <string>
 
-class Data
+struct Data
 {
 public:
 	Data(void);
