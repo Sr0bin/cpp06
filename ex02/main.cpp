@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 14:55:04 by rorollin          #+#    #+#             */
-/*   Updated: 2026/09/16 17:00:04 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/09/16 17:04:01 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int main()
 	srand(time(0));
 	base = generate();
 	identify(base);
-	identify(base);
+	identify(*base);
+	delete base;
 
 }
